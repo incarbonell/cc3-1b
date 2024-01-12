@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class WashingClothesProgram {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Step 1: I gather my dirty clothes");
+
+        System.out.println("Step2: I separate white clothes from colored clothes.");
+
+        System.out.println("Step 3: Open the washing machine and ensure it's clean, then I add right amount of water (lg washing machine 8kg,64liters water capacity ).");
+
+        System.out.print("Step 4: Measure and add detergent (Cala or Surf). Enter the amount in grams,1sachet=75grams: ");
+        double detergentGrams = scanner.nextDouble();
+
+        System.out.println("Step 5: Load clothes into the washing machine.");
+
+        System.out.println("Step 6: Set washing timer");
+
+        System.out.println("Step 7: Close the washing machine and start the wash cycle.");
+
+        System.out.println("Step 8: I Wait for the washing machine to finish the cycle.");
+
+        System.out.println("Step 9: I Open the washing machine and remove my clothes.");
+        
+        System.out.println("Step 10: rinse the clothes three times with clean water ");
+        
+        System.out.print("Step 11: Is the weather suitable for drying outside? (true/false): ");
+        boolean isWeatherNice = scanner.nextBoolean();
+
+        if (isWeatherNice) {
+            System.out.println("Hang the clothes outside to dry.");
+        } else {
+            System.out.println("Use a spinner to dry the clothes.");
+        }
+
+        System.out.println("Step 12:When my clothes are  dry, I fold it or hang them in my cabinet");
+
+        scanner.close();
+    }
+}
