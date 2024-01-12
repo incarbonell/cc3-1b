@@ -1,0 +1,19 @@
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      Console.Write("Weight in Pounds (lbs): ");
+
+     double weight = double.Parse(Console.ReadLine());
+
+      Console.WriteLine("Weight converted to Kilograms (kg): " + weight * 0.453592);
+      Console.WriteLine("===============================================");
+      
+      
+    }
+  }
+}
