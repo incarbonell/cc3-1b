@@ -13,6 +13,19 @@ namespace MyApplication
       Console.WriteLine("Weight converted to Kilograms (kg): " + weight * 0.453592);
       Console.WriteLine("===============================================");
       
+      Console.Write("Length in Miles (mi): ");
+
+     double distance = double.Parse(Console.ReadLine());
+
+      Console.WriteLine("Length in Kilometers (km): " + distance * 1.609344);
+      Console.WriteLine("===============================================");
+      
+      Console.Write("Temperature in Fahrenheit (°F): ");
+
+     double temperature = double.Parse(Console.ReadLine());
+
+      Console.WriteLine("Temperature in Celcius (°C): " + temperature - 32 * 5/9);
+      Console.WriteLine("===============================================");
       
     }
   }
