@@ -1,0 +1,181 @@
+using System;
+
+namespace RampUp2
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      Console.WriteLine("Sample output for part 1");
+      Console.WriteLine("");
+      Console.Write("Weight in Pounds (lbs): ");
+
+     double weight = double.Parse(Console.ReadLine());
+
+      Console.WriteLine("Weight converted to Kilograms (kg): " + weight * 0.453592);
+      Console.WriteLine("===============================================");
+      
+      Console.Write("Length in Miles (mi): ");
+
+     double distance = double.Parse(Console.ReadLine());
+
+      Console.WriteLine("Length in Kilometers (km): " + distance * 1.609344);
+      Console.WriteLine("===============================================");
+      
+      Console.Write("Temperature in Fahrenheit (°F): ");
+
+     double temperature = double.Parse(Console.ReadLine());
+
+      Console.WriteLine("Temperature in Celcius (°C): " + (temperature - 32) * 5/9);
+      
+      Console.WriteLine("===============================================");
+      
+      {
+        int numberOfStudents = 10;
+        int[] ages = new int[numberOfStudents];
+
+        for (int i = 0; i < numberOfStudents; i++)
+        {
+            Console.Write($"Age of Student {i + 1}: ");
+            ages[i] = int.Parse(Console.ReadLine());
+        }
+
+        double sum = 0;
+        foreach (int age in ages)
+        {
+            sum += age;
+        }
+
+        double average = sum / numberOfStudents;
+
+        Console.WriteLine($"The average age of the students is: {average}");
+    }
+    
+      Console.WriteLine("===============================================");
+      {
+        // Character names
+        string character1 = "Apple";
+        string character2 = "Mango";
+        string character3 = "Lemon";
+        string character4 = "Strawberry";
+        string character5 = "Blueberry";
+
+        // Equipment names
+        string equipment1 = "magical bow";
+        string equipment2 = "katana";
+        string equipment3 = "spear";
+        string equipment4 = "dagger";
+        string equipment5 = "double edged sword";
+
+        // Ability names
+        string ability1= "fire";
+        string ability2= "water";
+        string ability3= "air";
+        string ability4= "weather";
+        string ability5= "nature";
+         
+         // item names
+        string item1 = "healing poition";
+        string item2 = "map";
+        string item3 = "magic pouch";
+        string item4 = "invisible clock";
+        string item5 = "shield";
+        
+        // Story
+        string story = $"In her previous existence, {character1} was incredibly kind. " +
+            $"When she was going down the street one day, she was stabbed by a random killer, and when she awoke, she had been reincarnated into the world of imagination.";
+
+        story += $"\n\nGod is sad about her untimely death, so he bestowed upon her the ability to manipulate {ability1} in order for her to survive, as well as a {equipment1} and {item1} " +
+            $"She meets {character2}, {character3}, {character4}, and {character5} after many days of roaming in the fantasy realm.";
+
+        story += $"\n\n{character2} can control the {ability2}, {character3} can control the {ability3}, {character4} can control the {ability5}, and {character5} can control {ability4}. They come across many monters as they proceed through the dungeon. " +
+            $"{character2} kills creatures with his {equipment3}, while {character3} uses his {equipment2}, {character5} uses his {equipment4}, and {character4} utilizes his {equipment5}.";
+
+        story += $"\n\nThey found a box at the end of the dungeon, " +
+            $"and when they opened it, it contained {item2}, {item3}, {item4}, and {item5}.";
+        
+        Console.WriteLine(story);
+    }
+     
+     
+      Console.WriteLine("");
+      Console.WriteLine("Part 2:");
+      Console.WriteLine("");
+      
+      //Write a program to that receives an input and prints the following number pattern using a loop. If output is zero or negative number an "Invalid input" should be displayed
+    {
+        Console.Write("Input: ");
+        int x = int.Parse(Console.ReadLine());
+
+        if (x <= 0)
+        {
+            Console.WriteLine("Invalid input");
+        }
+        else
+        {
+            
+            for (int i = 1; i <= x; i++)
+            {
+                
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write(j + " ");
+                }
+
+               
+                Console.WriteLine();
+            }
+        }
+    }
+    
+      Console.WriteLine("");
+     
+{
+        Console.Write("Enter a number: ");
+        int x = int.Parse(Console.ReadLine());
+        
+        if (x <= 0)
+        {
+            Console.WriteLine("Invalid input");
+        }
+        else
+    {
+        int sum = 0;
+        for (int i = 1; i <= x; i++)
+        {
+            sum = sum + i;
+        }
+        Console.WriteLine(sum);
+    }
+}
+    
+      Console.WriteLine("");
+    {
+        Console.Write("Input: ");
+        int z = int.Parse(Console.ReadLine());
+        
+         if (z <= 0)
+        {
+            Console.WriteLine("Invalid input");
+        }
+        else
+
+        for (int i = z; i >= 1; i--)
+        {
+            
+            for (int j = 1; j <= i; j++)
+            {
+                Console.Write(j + " ");
+            }
+
+            Console.WriteLine();
+        }
+    }
+        
+      
+          
+    
+     
+    }
+  }
+}
