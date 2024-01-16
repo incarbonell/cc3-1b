@@ -1,11 +1,13 @@
 using System;
 
-namespace MyApplication
+namespace RampUp2
 {
   class Program
   {
     static void Main(string[] args)
     {
+      Console.WriteLine("Sample output for part 1");
+      Console.WriteLine("");
       Console.Write("Weight in Pounds (lbs): ");
 
      double weight = double.Parse(Console.ReadLine());
@@ -24,9 +26,86 @@ namespace MyApplication
 
      double temperature = double.Parse(Console.ReadLine());
 
-      Console.WriteLine("Temperature in Celcius (°C): " + temperature - 32 * 5/9);
-      Console.WriteLine("===============================================");
+      Console.WriteLine("Temperature in Celcius (°C): " + (temperature - 32) * 5/9);
+    
+      Console.WriteLine("");
+      Console.WriteLine("Part 2:");
+      Console.WriteLine("");
       
+      //Write a program to that receives an input and prints the following number pattern using a loop. If output is zero or negative number an "Invalid input" should be displayed
+    {
+        Console.Write("Input: ");
+        int x = int.Parse(Console.ReadLine());
+
+        if (x <= 0)
+        {
+            Console.WriteLine("Invalid input");
+        }
+        else
+        {
+            
+            for (int i = 1; i <= x; i++)
+            {
+                
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write(j + " ");
+                }
+
+               
+                Console.WriteLine();
+            }
+        }
+    }
+    
+      Console.WriteLine("");
+     
+{
+        Console.Write("Enter a number: ");
+        int x = int.Parse(Console.ReadLine());
+        
+        if (x <= 0)
+        {
+            Console.WriteLine("Invalid input");
+        }
+        else
+    {
+        int sum = 0;
+        for (int i = 1; i <= x; i++)
+        {
+            sum = sum + i;
+        }
+        Console.WriteLine(sum);
+    }
+}
+    
+      Console.WriteLine("");
+    {
+        Console.Write("Input: ");
+        int z = int.Parse(Console.ReadLine());
+        
+         if (z <= 0)
+        {
+            Console.WriteLine("Invalid input");
+        }
+        else
+
+        for (int i = z; i >= 1; i--)
+        {
+            
+            for (int j = 1; j <= i; j++)
+            {
+                Console.Write(j + " ");
+            }
+
+            Console.WriteLine();
+        }
+    }
+        
+      
+          
+    
+     
     }
   }
 }
