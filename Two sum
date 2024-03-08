@@ -1,23 +1,58 @@
-// Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+using System;
 
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
+public class TwoSum
+{
+    public static int[] TwoSums(int[] nums, int target)
+    {
+        for (int x = 0; x < nums.Length - 1; x++)
+        {
+            for (int y = x + 1; y < nums.Length; y++)
+            {
+                if (nums[x] + nums[y] == target)
+                {
+                    return new int[] { x, y };
+                }
+            }
+        }
+        return new int[] { -1, -1 };
+    }
 
-You can return the answer in any order.
+    public static void Main()
+    {
+        Console.Write("Enter integers separated by commas: ");
+        string[] input = Console.ReadLine().Split(',');
 
- 
+        int[] nums = new int[input.Length];
+        for (int x = 0; x < input.Length; x++)
+        {
+            if (int.TryParse(input[x], out int num))
+            {
+                nums[x] = num;
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please enter valid integers.");
+                return;
+            }
+        }
 
-Example 1:
+        Console.Write("Enter the target sum: ");
+        if (int.TryParse(Console.ReadLine(), out int target))
+        {
+            int[] result = TwoSums(nums, target);
 
-Input: nums = [2,7,11,15], target = 9
-Output: [0,1]
-Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
-
-Example 2:
-
-Input: nums = [3,2,4], target = 6
-Output: [1,2]
-
-Example 3:
-
-Input: nums = [3,3], target = 6
-Output: [0,1]
+            if (result[0] != -1)
+            {
+                Console.WriteLine($"Indices: {result[0]} and {result[1]}");
+            }
+            else
+            {
+                Console.WriteLine("No solution found.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Invalid target sum. Please enter a valid integer.");
+        }
+    }
+}
